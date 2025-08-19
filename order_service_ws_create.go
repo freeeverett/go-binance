@@ -19,7 +19,7 @@ type OrderCreateWsService struct {
 
 // NewOrderCreateWsService init OrderCreateWsService
 func NewOrderCreateWsService(apiKey, secretKey string) (*OrderCreateWsService, error) {
-	conn, err := websocket.NewConnection(WsApiInitReadWriteConn, WebsocketKeepalive, WebsocketTimeoutReadWriteConnection)
+	conn, err := websocket.NewConnection(WsApiInitReadWriteConn, false, WebsocketTimeoutReadWriteConnection)
 	if err != nil {
 		return nil, err
 	}
