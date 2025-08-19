@@ -15,7 +15,7 @@ import (
 
 	"github.com/bitly/go-simplejson"
 
-	"github.com/adshao/go-binance/v2/common"
+	"github.com/freeeverett/go-binance/v2/common"
 )
 
 // SideType define side type of order
@@ -127,7 +127,7 @@ type CMPosition struct {
 // Endpoints
 var (
 	BaseApiMainUrl = "https://papi.binance.com"
-	//BaseApiTestnetUrl = "https://testnet.binancefuture.com"
+	// BaseApiTestnetUrl = "https://testnet.binancefuture.com"
 )
 
 // Global enums

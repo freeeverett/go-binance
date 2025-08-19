@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/adshao/go-binance/v2/futures"
+	"github.com/freeeverett/go-binance/v2/futures"
 )
 
 // CreateFuturesAlgoTwapOrderService create future algo order
@@ -260,7 +260,7 @@ func (s *ListOpenFuturesAlgoOrdersService) Do(ctx context.Context, opts ...Reque
 }
 
 type FuturesAlgoOrder struct {
-	//策略订单ID
+	// 策略订单ID
 	AlgoId           int64                      `json:"algoId"`
 	Symbol           string                     `json:"symbol"`
 	Side             SideType                   `json:"side"`

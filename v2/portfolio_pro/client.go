@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/adshao/go-binance/v2/common"
+	"github.com/freeeverett/go-binance/v2/common"
 )
 
 const (

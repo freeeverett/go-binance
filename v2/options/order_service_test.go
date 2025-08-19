@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/adshao/go-binance/v2/common"
+	"github.com/freeeverett/go-binance/v2/common"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -574,9 +574,9 @@ func (s *orderServiceTestSuite) TestCancelBatchOrders() {
 			"orderIds":       "[4710989013445263360,4710989013445263361]",
 			"clientOrderIds": "[\"053021\",\"053020\"]",
 		})
-		//expectClientOrderIds := "[\"053021\",\"053020\"]"
-		//s.r().Equal(expectClientOrderIds, r.form["clientOrderIds"])
-		//r.form.Del("clientOrderIds")
+		// expectClientOrderIds := "[\"053021\",\"053020\"]"
+		// s.r().Equal(expectClientOrderIds, r.form["clientOrderIds"])
+		// r.form.Del("clientOrderIds")
 		s.assertRequestEqual(e, r)
 	})
 

@@ -591,7 +591,7 @@ type WsOrderUpdate struct {
 	QuoteVolume             string          `json:"Q"`
 	SelfTradePreventionMode string          `json:"V"`
 
-	//These are fields that appear in the payload only if certain conditions are met.
+	// These are fields that appear in the payload only if certain conditions are met.
 	TrailingDelta              int64  `json:"d"` // Appears only for trailing stop orders.
 	TrailingTime               int64  `json:"D"`
 	StrategyId                 int64  `json:"j"` // Appears only if the strategyId parameter was provided upon order placement.
@@ -905,6 +905,10 @@ func WsApiInitReadWriteConn() (*websocket.Conn, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	go func() {
+		keepAlive(conn, WebsocketTimeout)
+	}()
 
 	return conn, err
 }
